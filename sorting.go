@@ -4,7 +4,25 @@ package algorithms
 func Bubble_sort_modified(list []int) {
 
 	// Skriv din kode her
-
+	
+func Bubble(list []int) {
+	swap := true
+	for swap {
+		swap = false
+		for i := 0; i < len(list) -1; i++{
+			if list[i + 1] < list[i]{
+				DoSwap(list, i, i + 1)
+				swap = true
+			}
+		}
+	}
+}
+// External swap function for re-use
+func DoSwap(list []int, i1 ,i2 int){
+	tmp := list[i1];
+	list[i1] = list[i2];
+	list[i2] = tmp;
+}
 
 }
 
