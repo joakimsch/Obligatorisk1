@@ -76,3 +76,15 @@ func benchmarkQSort(i int, b *testing.B) {
 		QuickSort(values)
 	}
 }
+
+
+// Benchmark håpe faen dette funke. hate livet atm
+func benchmarkBSortModified(i int, b *testing.B) {
+	for j := 0; j < b.N; j++ {
+		b.StopTimer()
+		values := perm(i)
+		b.StartTimer()
+		bSortModified(values)
+	}
+}
+
